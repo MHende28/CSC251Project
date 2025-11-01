@@ -1,9 +1,10 @@
-// This class will model an isurance policy for one person.
+// This class will model an insurance policy for one person.
 
 public class Policy {
    
    private int policyNumber;
    private String providerName;
+   private PolicyHolder policyHolder;
    private static int instanceCount = 0;
      
    public Policy() {
@@ -13,10 +14,13 @@ public class Policy {
       instanceCount++;   
    }
    
-   public Policy(int number, String provName) {
+   public Policy(int number, String provName, PolicyHolder holder) {
       
       policyNumber = number;
       providerName = provName;
+      
+      policyHolder = new PolicyHolder(holder);
+      
       instanceCount++;
         
    }
@@ -45,14 +49,19 @@ public class Policy {
    
    }
    
-   public int getInstanceCount() {
+   public static int getInstanceCount() {
       
       return instanceCount;
    }
    
+   public PolicyHolder getPolicyHolder() {
+      
+      return new PolicyHolder(policyHolder);
+   }
+   
    public String toString() {
       
-      String str = "Policy Number: " + policyNumber + "Providers Name: " + providerName;
+      String str = "Policy Number: " + policyNumber + "\nProviders Name: " + providerName + "\n" + policyHolder;
       
       return str;
    }  
