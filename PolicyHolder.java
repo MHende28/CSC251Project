@@ -17,11 +17,6 @@ public class PolicyHolder {
       smokingStatus = smoker;
       holdersHeight = height;
       holdersWeight = weight;
-   
-   public void setProviderName(String provName) {
-      
-      providerName = provName;
-      
    }
    
    public void setFirstName(String first) {
@@ -101,3 +96,13 @@ public class PolicyHolder {
       return (holdersWeight * 703.0) / Math.pow(holdersHeight, 2);
       
    }
+   
+   public String toString() {
+      
+      String str = "Holder First Name: " + firstName + "\nHolders Last Name: " + lastName +
+                   "\nHolders Age: " + holdersAge + "\nHolders Smoking Status: " + smokingStatus +
+                   "\nHolders Height: " + holdersHeight + "\nHolders Weight: " + holdersWeight;
+      
+      return str;
+   }
+}
