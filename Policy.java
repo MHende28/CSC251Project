@@ -4,17 +4,20 @@ public class Policy {
    
    private int policyNumber;
    private String providerName;
+   private static int instanceCount = 0;
      
    public Policy() {
    
       policyNumber = 0;
-      providerName = "";     
+      providerName = "";  
+      instanceCount++;   
    }
    
    public Policy(int number, String provName) {
       
       policyNumber = number;
       providerName = provName;
+      instanceCount++;
         
    }
    
@@ -40,6 +43,11 @@ public class Policy {
       
       return providerName;
    
+   }
+   
+   public int getInstanceCount() {
+      
+      return instanceCount;
    }
    
    public String toString() {
