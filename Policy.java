@@ -8,27 +8,14 @@ public class Policy {
    public Policy() {
    
       policyNumber = 0;
-      providerName = "";
-      firstName = "";
-      lastName = "";
-      holdersAge = 0;
-      smokingStatus = "";
-      holdersHeight = 0.0;
-      holdersWeight = 0.0;
-     
+      providerName = "";     
    }
    
-   public Policy(int number, String provName, String first, String last, int age, String smoker, double height, double weight) {
+   public Policy(int number, String provName) {
       
       policyNumber = number;
       providerName = provName;
-      firstName = first;
-      lastName = last;
-      holdersAge = age;
-      smokingStatus = smoker;
-      holdersHeight = height;
-      holdersWeight = weight;
-   
+        
    }
    
    public void setPolicyNumber(int number) {
@@ -53,6 +40,13 @@ public class Policy {
       
       return providerName;
    
+   }
+   
+   public String toString() {
+      
+      String str = "Policy Number: " + policyNumber + "Providers Name: " + providerName;
+      
+      return str;
    }  
 }
    
