@@ -4,13 +4,7 @@ public class Policy {
    
    private int policyNumber;
    private String providerName;
-   private String firstName;
-   private String lastName;
-   private int holdersAge;
-   private String smokingStatus;
-   private double holdersHeight;
-   private double holdersWeight;
-   
+     
    public Policy() {
    
       policyNumber = 0;
@@ -49,42 +43,6 @@ public class Policy {
       
    }
    
-   public void setFirstName(String first) {
-      
-      firstName = first;
-      
-   }
-   
-   public void setLastName(String last) {
-      
-      lastName = last;
-   
-   }
-   
-   public void setHoldersAge(int age) {
-   
-      holdersAge = age;
-      
-   }
-   
-   public void setSmokingStatus(String smoker) {
-   
-      smokingStatus = smoker;
-      
-   }
-   
-   public void setHoldersHeight(double height) {
-   
-      holdersHeight = height;
-      
-   }
-   
-   public void setHoldersWeight(double weight) {
-       
-      holdersWeight = weight;
-      
-   }
-   
    public int getPolicyNumber() {
       
       return policyNumber;
@@ -95,49 +53,7 @@ public class Policy {
       
       return providerName;
    
-   }
-   
-   public String getFirstName() {
-      
-      return firstName;
-      
-   }
-   
-   public String getLastName() {
-   
-      return lastName;
-     
-   }
-   
-   public int getHoldersAge() {
-      
-      return holdersAge;
-   
-   }
-   
-   public String getSmokingStatus() {
-   
-      return smokingStatus;
-      
-   }
-   
-   public double getHoldersHeight() {
-      
-      return holdersHeight;
-      
-   }
-   
-   public double getHoldersWeight() {
-   
-      return holdersWeight;
-      
-   }
-   
-   public double getBMI() {
-   
-      return (holdersWeight * 703.0) / Math.pow(holdersHeight, 2);
-      
-   }
+   }  
 }
    
    
